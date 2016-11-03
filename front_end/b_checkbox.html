@@ -1,0 +1,32 @@
+    <!DOCTYPE html>  
+    <html>  
+    <head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <title>带全选功能的下拉框</title>  
+    <style type="text/css">  
+        .checkboxselect-container{border:1px solid #33CCFF;  
+            //visibility:visible;  
+            visibility:hidden;  
+            background:white;}  
+        .checkboxselect-item{padding:3px 2px;}  
+        .checkboxselect-active{background:#33CCFF;color:white;padding:3px 2px;}   
+    </style>  
+    <script type="text/javascript" src="checkboxSelect.js"></script>  
+    <script type="text/javascript">  
+        window.onload = function(){   
+            var checkboxSelect = new CheckboxSelect({  
+                input:document.getElementById('checkboxSelect'),  
+                hiddeninput:document.getElementById('hiddencheckboxSelect'),  
+                width:150,  
+                opacity:0.9,  
+                data:['beijing','shanghai','nanjing', 'shenzhen'],  
+            });       
+        }  
+    </script>  
+    </head>  
+    <body>  
+        所选地区：<input type="text" id="checkboxSelect" name="checkboxSelect" style="width: 250px;"></input>  
+        所选地区所对应的ID值：<input type="text" id="hiddencheckboxSelect" name="hiddencheckboxSelect" style="width:250px;"></input>  
+        <br/>  
+    </body>  
+    </html>  
